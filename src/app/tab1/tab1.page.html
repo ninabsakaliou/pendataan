@@ -1,0 +1,69 @@
+<ion-header translucent="true">
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">
+      SELAMAT DATANG
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen class="ion-padding">
+
+  <!-- Logo Aplikasi -->
+  <div class="logo-container">
+    <img src="https://www.rumpuntekno.com/assets/mitra/6/2021/02/logo-kabupaten-kepulauan-mentawai-sumatera-barat-sumbar-halonusa-kariadil-harefa.jpg" alt="Logo Desa" class="logo-image" />
+  </div>
+
+  <!-- Banner Selamat Datang -->
+  <ion-card color="light">
+    <ion-card-header>
+      <ion-card-title class="ion-text-center" color="primary">
+        APLIKASI PENDATAAN PENDUDUK
+      </ion-card-title>
+      <ion-card-subtitle class="ion-text-center">DESA MADOBAG</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-card-title class="ion-text-center" color="primary">
+       Aplikasi ini digunakan untuk mendata informasi penduduk secara digital.
+        Anda dapat menambahkan data baru, melihat data yang telah tersimpan, serta mengelola informasi lainnya.
+      </ion-card-title>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Ikon Akses Cepat -->
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6">
+        <ion-button expand="block" color="success" routerLink="/registrasi">
+          <ion-icon name="person-add-outline" slot="start"></ion-icon>
+          Tambah Data
+        </ion-button>
+      </ion-col>
+      <ion-col size="6">
+        <ion-button expand="block" color="tertiary" routerLink="/daftar-data">
+          <ion-icon name="folder-open-outline" slot="start"></ion-icon>
+          Lihat Data
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-margin-top">
+      <ion-col size="6">
+        <ion-button expand="block" color="warning" routerLink="/statistik">
+          <ion-icon name="bar-chart-outline" slot="start"></ion-icon>
+          Statistik
+        </ion-button>
+      </ion-col>
+      <ion-col size="6">
+        <ion-button expand="block" color="medium" routerLink="/tentang">
+          <ion-icon name="information-circle-outline" slot="start"></ion-icon>
+          Tentang
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- Footer Informasi -->
+  <ion-text class="ion-text-center ion-margin-top">
+    <small>Versi 1.0 - Desa Madobag &copy; 2025</small>
+  </ion-text>
+
+</ion-content>

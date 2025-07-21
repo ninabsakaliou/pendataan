@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Data penduduk</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content 
+      pullingIcon="arrow-dropdown" 
+      pullingText="Pull to refresh" 
+      refreshingSpinner="circles" 
+      refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <ion-card *ngFor="let alumni of alumnis">
+    <ion-card-header>
+      <ion-card-title>{{alumni.nama}}</ion-card-title>
+      <ion-card-subtitle>agama: {{alumni.agama}}</ion-card-subtitle>
+      <ion-card-subtitle>jenis kelamin: {{alumni.jeniskelamin}}</ion-card-subtitle>
+      <ion-card-subtitle>alamat: {{alumni.alamat}}</ion-card-subtitle>
+      <ion-card-subtitle>pekerjaan: {{alumni.pekerjaan}}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      Nik: {{alumni.nik}}
+    </ion-card-content>
+    <ion-card-content>status: {{alumni.status}}</ion-card-content>
+  </ion-card>
+      
+  <ion-infinite-scroll (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="Loading more data...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>
